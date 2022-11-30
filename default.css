@@ -82,12 +82,14 @@ form {
   border-style: solid;
   border-width: 3px;
   border-color: yellow;
-  height: 86%;
-  margin: 2% 1% 2% 1%;
+  height: 85%;
+
+  margin: 2% 1% 1% 1%;
+  padding-bottom: 15px;
 }
 
 #row_purple {
-  height: 12%;
+  height: 10%;
   border-style: solid;
   border-width: 3px;
   border-color: rgb(230, 0, 230);

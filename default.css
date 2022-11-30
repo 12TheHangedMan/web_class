@@ -1,0 +1,95 @@
+.container-fluid {
+  border-width: 2px;
+  border-style: solid;
+  height: 100vh;
+  border-color: antiquewhite;
+  box-sizing: border-box;
+}
+
+h9 {
+  font-size: small;
+  padding-bottom: 25px;
+}
+
+h1 {
+  padding-top: 25px;
+}
+
+span {
+  font-size: x-small;
+}
+
+#row_one {
+  position: fixed;
+  text-align: center;
+  border-style: solid;
+  box-sizing: border-box;
+  border-width: 4px;
+  border-color: rgb(2, 255, 65);
+  background-color: rgb(240, 240, 240);
+  height: 160px;
+  width: 100vw;
+}
+
+#row_two {
+  padding-top: 165px;
+  display: flex;
+  height: 99vh;
+}
+
+.col {
+  box-sizing: border-box;
+  border-style: solid;
+  border-width: 3px;
+}
+
+form {
+  padding-left: 25%;
+  padding-right: 25%;
+}
+
+#col_left {
+  border-color: red;
+  margin-left: 6%;
+  margin-right: 3%;
+}
+
+#col_right {
+  border-color: blue;
+  margin-left: 3%;
+  margin-right: 6%;
+}
+
+.sub_row {
+  display: flexbox;
+  justify-content: center;
+}
+
+.btn {
+  width: 100%;
+}
+
+#question_1 {
+  padding-top: 5%;
+}
+
+#input_4 {
+  height: 128px;
+  overflow-y: scroll;
+}
+
+#row_yellow {
+  border-style: solid;
+  border-width: 3px;
+  border-color: yellow;
+  height: 86%;
+  margin: 2% 1% 2% 1%;
+}
+
+#row_purple {
+  height: 12%;
+  border-style: solid;
+  border-width: 3px;
+  border-color: rgb(230, 0, 230);
+  margin: 1% 1% 1% 1%;
+}

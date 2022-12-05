@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Access & Modify Object</title>
+  </head>
+
+  <body>
+    <script>
+      // Information about the Hiking Bermuda book by Cecile Davidson
+      const hikingBermuda = {
+        author: "Cecile Davidson",
+        price: 17.95,
+        title: "Hiking Bermuda",
+        sections: {
+          0: {
+            sectionName: "Preface",
+            chapters: [
+              {
+                name: "Trail Locator",
+                page: 12,
+              },
+            ],
+          },
+          1: {
+            sectionName: "Introduction",
+            chapters: [
+              {
+                name: "Map Legend",
+                page: 24,
+              },
+              {
+                name: "Rating System",
+                page: 22,
+              },
+            ],
+          },
+          2: {
+            sectionName: "West End",
+            chapters: [
+              {
+                name: "Botanical Gardens",
+                page: 63,
+              },
+              {
+                name: "Rockaway, Whale Bay Park",
+                page: 45,
+              },
+              {
+                name: "Somerset Bridge, Hog Bay Park",
+                page: 39,
+              },
+            ],
+          },
+        },
+        trails: [
+          {
+            name: "Somerset to Hamilton Railway Trail",
+            page: 75,
+            section: "West End",
+            distanceInMiles: 11.7,
+            rating: "Hardy",
+          },
+          {
+            name: "City of Hamilton",
+            page: 69,
+            section: "West End",
+            distanceInMiles: 2.4,
+            rating: "Easy",
+          },
+          {
+            name: "St. George's Point",
+            page: 131,
+            section: "East End",
+            distanceInMiles: 3.6,
+            rating: "Moderate",
+          },
+          {
+            name: "South Shore Beaches",
+            page: 53,
+            section: "West End",
+            distanceInMiles: 5.0,
+            rating: "Moderate",
+          },
+        ],
+      };
+
+      // console log the title of the book
+      // YOUR CODE GOES HERE
+      console.log(hikingBermuda.title);
+
+      // console log the author of the book
+      // YOUR CODE GOES HERE
+      console.log(hikingBermuda.author);
+
+      console.log("\nHomework Starts Here!!!");
+      // console log the price of the book with $ sign in front of it
+      // YOUR CODE GOES HERE
+      console.log(`\n1. the price of the book: \$${hikingBermuda.price}.`);
+
+      // console log the number of chapters in the Preface section
+      // YOUR CODE GOES HERE
+      console.log(
+        `\n2. number of chapters in the Preface section: ${hikingBermuda.sections[0].chapters.length}.`
+      );
+      // console log the number of chapters in the Introduction section
+      // YOUR CODE GOES HERE
+
+      console.log(`\n3. number of chapters in the Introduction section:
+      ${hikingBermuda.sections["1"].chapters.length}.`);
+      // console log the number of chapters in the West End section
+      // YOUR CODE GOES HERE
+      console.log(`\n4. number of chapters in the West End section:
+      ${hikingBermuda.sections["2"].chapters.length}.`);
+      // console log the name of the 4th trail
+      // YOUR CODE GOES HERE
+      console.log(`\n5. name of the 4th trail:
+      ${hikingBermuda.trails[3].name}.`);
+      // console log the page of the 3rd trail
+      // YOUR CODE GOES HERE
+      console.log(`\n6. name of the 3rd trail:
+      ${hikingBermuda.trails[2].name}.`);
+      // console log the section of the 2nd trail
+      // YOUR CODE GOES HERE
+      console.log(`\n7. name of the 2nd trail:
+      ${hikingBermuda.trails[1].name}.`);
+      // console log the rating of the 1st trail
+      // YOUR CODE GOES HERE
+      console.log(`\n8. rating of the 1st trail:
+      ${hikingBermuda.trails[0].rating}.`);
+      // console log only trails that are at least 4.0 miles
+      // YOUR CODE GOES HERE
+      const trails = hikingBermuda.trails;
+      const longTrails = [];
+      for (const trail of trails) {
+        if (trail.distanceInMiles >= 4.0) {
+          longTrails.push(trail);
+        }
+      }
+      console.table(longTrails);
+
+      console.log("\nHomework Continues Here!!!");
+      // console log only trails that are at most 4.0 miles
+      // YOUR CODE GOES HERE
+      console.log("\n9. trails that are at most 4.0 miles:");
+      console.table(
+        hikingBermuda.trails.filter((object) => object.distanceInMiles <= 4)
+      );
+      // console log only trails on the West End
+      // YOUR CODE GOES HERE
+      console.log("\n10. trails on the West End:");
+      console.table(
+        hikingBermuda.trails.filter((object) => object.section === "West End")
+      );
+      // console log only trails on the East End
+      // YOUR CODE GOES HERE
+      console.log("\n11. trails on the East End:");
+      console.table(
+        hikingBermuda.trails.filter((object) => object.section === "East End")
+      );
+      // console log only moderate trails
+      // YOUR CODE GOES HERE
+      console.log("\n12. moderate trails:");
+      console.table(
+        hikingBermuda.trails.filter((object) => object.rating === "Moderate")
+      );
+      // console log only easy trails
+      // YOUR CODE GOES HERE
+      console.log("\n13. easy trails:");
+      console.table(
+        hikingBermuda.trails.filter((object) => object.rating === "Easy")
+      );
+      // console log only hardy trails
+      // YOUR CODE GOES HERE
+      console.log("\n14. hardy trails:");
+      console.table(
+        hikingBermuda.trails.filter((object) => object.rating === "Hardy")
+      );
+    </script>
+  </body>
+</html>
